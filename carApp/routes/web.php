@@ -24,7 +24,7 @@ Route::prefix('cars')->name('cars.')->controller(CarsController::class)->group(f
 
     Route::get('/{slug}-{car}','show')->where([
         'car'=>'[0-9]+',
-    'slug'=>'[a-z0-9\-]+'
+        'slug'=>'[A-Z-a-z0-9\-]+'
     ])->name('show');
 
 

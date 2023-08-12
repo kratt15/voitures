@@ -34,7 +34,10 @@ class CarsController extends Controller
 
     public function show(string $slug, Cars $car ):RedirectResponse|View {
 
+       
+
         if($car->slug!==$slug){
+
             return to_route('cars.show',['slug'=>$car->slug,'car'=>$car->id ]);
         }
 
