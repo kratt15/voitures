@@ -3,39 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liste des Voitures</title>
+    <title>@yield('title')</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
-<div class="container mt-5">
-    <h1>Liste des Voitures</h1>
-    <div class="row">
-        <div class="col-md-4 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Toyota Camry</h5>
-                    <p class="card-text"><strong>Marque:</strong> Toyota</p>
-                    <p class="card-text"><strong>Modèle:</strong> Camry</p>
-                    <p class="card-text"><strong>Couleur:</strong> Blanche</p>
-                    <a href="car-preview.html?id=1" class="btn btn-primary">Aperçu</a>
-                </div>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Liste des Voitures</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Accueil</a>
+                </li>
+                <!-- Ajouter d'autres liens de navigation ici -->
+            </ul>
         </div>
-        <div class="col-md-4 mb-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Honda Accord</h5>
-                    <p class="card-text"><strong>Marque:</strong> Honda</p>
-                    <p class="card-text"><strong>Modèle:</strong> Accord</p>
-                    <p class="card-text"><strong>Couleur:</strong> Noire</p>
-                    <a href="car-preview.html?id=2" class="btn btn-primary">Aperçu</a>
-                </div>
-            </div>
-        </div>
-        <!-- Ajouter d'autres voitures ici -->
     </div>
+</nav>
+
+<div class="container mt-5">
+  @yield('content')
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

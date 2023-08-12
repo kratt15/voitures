@@ -22,9 +22,10 @@ Route::prefix('cars')->name('cars.')->controller(CarsController::class)->group(f
 
     Route::get('/','index')->name('index');
 
-    Route::get('/{slug}-{car}','show')->name('show')->where([
-        'id'=>'[0-9]+',
-    'slug'=>'[a-z0-9\-]+']);
+    Route::get('/{slug}-{car}','show')->where([
+        'car'=>'[0-9]+',
+    'slug'=>'[a-z0-9\-]+'
+    ])->name('show');
 
 
 
