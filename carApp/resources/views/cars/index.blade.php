@@ -7,6 +7,9 @@
 <h1>Liste des Voitures</h1>
 <div class="row">
     {{ $cars->links() }}
+   <div class="col-md-4 mb-4">
+    <a href="{{ route('cars.create')}}" class="btn btn-primary">Nouvelle voiture</a>
+   </div>
     @foreach ($cars as $car)
       <article>
 
