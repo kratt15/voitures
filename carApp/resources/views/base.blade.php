@@ -17,7 +17,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Accueil</a>
+                    <a class="nav-link" href="{{ route('cars.index') }}">Accueil</a>
                 </li>
                 <!-- Ajouter d'autres liens de navigation ici -->
             </ul>

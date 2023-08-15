@@ -21,7 +21,10 @@ Route::get('/', function () {
 Route::prefix('cars')->name('cars.')->controller(CarsController::class)->group(function(){
 
     Route::get('/','index')->name('index');
-
+    Route::get('/new','create')->name('create');
+    Route::post('/new','store');
+    Route::get('/{car}/edit','edit')->name('edit');
+    Route::post('/{car}/edit','update');
     Route::get('/{slug}-{car}','show')->where([
         'car'=>'[0-9]+',
         'slug'=>'[A-Z-a-z0-9\-]+'

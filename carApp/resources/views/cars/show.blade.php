@@ -1,7 +1,7 @@
-{{-- @extends('baseShow') --}}
-@extends('base')
+@extends('baseShow')
+{{-- @extends('base.show') --}}
 
-{{-- @section('title',{{ $carss->marque }}" "{{ $carss->modele }}" "{{$carss->couleur  }}) --}}
+@section('title','Voir')
 
 
 
